@@ -30,3 +30,4 @@
 		Update user SET username=#{username}, password=#{password}, sex=#{sex}, age=#{age} WHERE id=#{id}
 	</update>
 </mapper>
+

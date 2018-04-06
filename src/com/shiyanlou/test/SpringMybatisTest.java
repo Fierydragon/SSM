@@ -1,4 +1,6 @@
-package com.shiyanlou.controller;
+package com.shiyanlou.test;
+
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,7 +11,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.shiyanlou.model.User;
 import com.shiyanlou.service.UserService;
 
-//Configure Spring integrate with JUnit,loading springIOC container when JUnit booted. 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:applicationContext.xml"})
 public class SpringMybatisTest {
@@ -23,6 +24,14 @@ public class SpringMybatisTest {
 		user.setUsername("shiyanlou");
 		user.setPassword("123456");
 		
-		//System.out.println(userService.login(user).toString());
+		System.out.println(userService.login(user).toString());
+	}
+	
+	@Test
+	public void testSelectAll() {
+		List<User> users = userService.selectAllUser();
+		for (User user : users) {
+			System.out.println(user.toString());
+		}
 	}
 }

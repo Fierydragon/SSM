@@ -28,7 +28,7 @@
     </bean>
     
     <!-- Map the "Sql interface" to "SqlSessionFactory" for Mybatis -->
-    <bean class="org.maybatis.spring.mapper.MapperScannerConfigurer">
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
     	<property name="basePackage" value="com.shiyanlou.mapper"></property>
     	<property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
