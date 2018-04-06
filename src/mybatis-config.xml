@@ -6,6 +6,6 @@
 		<package name="com.shiyanlou.model"/>
 	</typeAliases>
 	<mappers>
-		<package name="com/shiyanlou/mapper"/>
+		<package name="com.shiyanlou.mapper"/>
 	</mappers>
 </configuration>

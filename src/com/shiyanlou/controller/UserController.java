@@ -50,7 +50,7 @@ public class UserController {
 		return "adduser";
 	}
 	
-	@RequestMapping("/toupdateuser")
+	@RequestMapping("/adduser")
 	public String addUser(User user, HttpServletRequest request) {
 		userService.addUser(user);
 		List<User> listUser = userService.selectAllUser();
